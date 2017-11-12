@@ -44,21 +44,29 @@ app.get('/', (req, res) => {
   res.render('welcome.hbs', {
     pageTitle: 'Welcome Page',
     pageContent: 'This webpage is a demo node server',
-  })
-})
+  });
+});
 
 app.get('/about', (req, res) => {
   //res.send('This is about page');
   res.render('about.hbs', {
     pageTitle: 'About Page',
   });
-})
+});
+
+app.get('/portfolio', (req, res) => {
+
+  res.render('portfolio.hbs', {
+    pageTitle: 'Portfolio Page'
+  });
+  
+});
 
 app.get('/bad', (req, res) => {
 
   res.send({
     error: 'Bad request'
-  })
+  });
 
 });
 
